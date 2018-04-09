@@ -11,6 +11,7 @@ import {
   List,
   Quote,
   Slide,
+  Code,
   Text
 } from "spectacle";
 
@@ -28,19 +29,35 @@ const theme = createTheme({
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
-});
+  });
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+          <Heading size={6} caps textColor="secondary">
+            Web Scraping / Web Automation
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px 0 0" textColor="tertiary" size={1} bold>
+            via Javascript
           </Text>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={4} textColor="secondary">
+            Tools needed
+          </Heading>
+          <List>
+            <ListItem>PhantomJS (<a href="http://phantomjs.org" _target="blank">http://phantomjs.org</a>)</ListItem>
+            <ListItem>CasperJS (<a href="http://casperjs.org" _target="blank">http://casperjs.org</a>)</ListItem>
+            <ListItem>Text Editor</ListItem>
+          </List>
+          <Text margin="40px 0 20px 0" size={1} bold>
+            or you can just
+          </Text>
+          <Code fit>
+            docker pull vitr/casperjs
+          </Code>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
