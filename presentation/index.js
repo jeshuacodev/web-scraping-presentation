@@ -59,6 +59,31 @@ export default class Presentation extends React.Component {
             docker pull vitr/casperjs
           </Code>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Why use a Headless Browser vs cURL or similar tools e.g. python scripts?
+          </Heading>
+          <List>
+            <ListItem>You don't have to be an expert in APIs or AJAX.</ListItem>
+            <ListItem>You don't have to worry about authentication/cookies.</ListItem>
+            <ListItem>You need to be able to render the HTML page into an image.</ListItem>
+            <ListItem>You have the option to easily use OCR tools.</ListItem>
+            <ListItem>You are already familiar with Javascript.</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            When should you consider NOT using a Headless Webkit?
+          </Heading>
+          <List>
+            <ListItem>You need a lightweight and high performance web crawler.</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            How will the infrastructure look like in an enterprise level application?
+          </Heading>
+        </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
