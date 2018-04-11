@@ -42,6 +42,7 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="tertiary" size={1} bold>
             via Javascript
           </Text>
+          <Cite>jeshua ensong</Cite>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={4} textColor="secondary">
@@ -59,23 +60,24 @@ export default class Presentation extends React.Component {
             docker pull vitr/casperjs
           </Code>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary">
-            Why use a Headless Browser vs cURL or similar tools e.g. python scripts?
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="tertiary">
+            Why use a Headless Browser vs cURL or similar tools e.g. python(urllib2 & BeautifulSoup)?
           </Heading>
-          <List>
+          <List fit size={6}>
             <ListItem>You don't have to be an expert in APIs or AJAX.</ListItem>
             <ListItem>You don't have to worry about authentication/cookies.</ListItem>
+            <ListItem>Fairly easy to integrate OCR tools.</ListItem>
             <ListItem>You need to be able to render the HTML page into an image.</ListItem>
-            <ListItem>You have the option to easily use OCR tools.</ListItem>
             <ListItem>You are already familiar with Javascript.</ListItem>
           </List>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary">
-            When should you consider NOT using a Headless Webkit?
+        <Slide transition={["zoom"]} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="tertiary">
+            When not to use a Headless Webkit?
           </Heading>
           <List>
+            <ListItem>When it's easier to access the data by reverse engineering the REST API.</ListItem>
             <ListItem>You need a lightweight and high performance web crawler.</ListItem>
           </List>
         </Slide>
